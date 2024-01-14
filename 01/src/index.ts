@@ -68,3 +68,16 @@
 // }
 // func1(25,23);
 
+
+
+type FuncTypeArray = (m:number[]) =>number[];
+const funcArray:FuncTypeArray= (m)=>{
+    return m;
+};funcArray([23,28,2,3,24,34,3,43,4,34,3])
+
+// REST Operator
+
+type FuncTypeRest = (...m:number[]) =>number[];
+const funcRest:FuncTypeRest = (...m)=>{
+    return m;
+};funcRest(23,28,2,3,24,34,3,43,4,34,3)
