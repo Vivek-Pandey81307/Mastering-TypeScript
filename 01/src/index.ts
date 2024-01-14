@@ -70,14 +70,26 @@
 
 
 
-type FuncTypeArray = (m:number[]) =>number[];
-const funcArray:FuncTypeArray= (m)=>{
-    return m;
-};funcArray([23,28,2,3,24,34,3,43,4,34,3])
+// type FuncTypeArray = (m:number[]) =>number[];
+// const funcArray:FuncTypeArray= (m)=>{
+//     return m;
+// };funcArray([23,28,2,3,24,34,3,43,4,34,3])
 
-// REST Operator
+// // REST Operator
 
-type FuncTypeRest = (...m:number[]) =>number[];
-const funcRest:FuncTypeRest = (...m)=>{
-    return m;
-};funcRest(23,28,2,3,24,34,3,43,4,34,3)
+// type FuncTypeRest = (...m:number[]) =>number[];
+// const funcRest:FuncTypeRest = (...m)=>{
+//     return m;
+// };funcRest(23,28,2,3,24,34,3,43,4,34,3)
+
+
+// function numby(n:number):number{
+//     return 34;
+// }
+
+
+// type funcType = number
+// const numbyy :(n:funcType)=>funcType = function numby (n:funcType){
+//     return n;
+// }
+// alert(numbyy(5))
