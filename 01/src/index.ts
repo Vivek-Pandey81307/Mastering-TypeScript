@@ -120,3 +120,29 @@
 //     photo: "samplephotourl",
 // }
 // createFuncWithObj(productOne)
+
+// interface Product{
+//     name : string,
+//     stock : number,
+//     price : number,
+//     photo ?: string,
+//     readonly id:string,
+// }
+
+// const productOne : Product = {
+//     name: "Macbook",
+//     stock : 45,
+//     price : 999999,
+//     photo : "samplephoto",
+//     id : "32ksjdflksjdflk"
+// };
+
+
+// //Never type
+// const errorhandler = ()=>{
+//     return new Error();
+// }
+
+// //
+// type themeMode = "light" | "dark";
+// const mode : themeMode = "light"
