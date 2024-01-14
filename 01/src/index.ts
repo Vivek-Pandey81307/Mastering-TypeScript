@@ -93,3 +93,30 @@
 //     return n;
 // }
 // alert(numbyy(5))
+
+// function with Object
+// const getData = (product:{
+//     name :string,
+//     stock :number,
+//     price:number,
+//     photo:string,
+// }):void=>{
+//     console.log(product);
+// }
+
+
+
+// function with object + separate type
+// type FuncWithObj = (product:{name : string,stock:number,price : number,photo : string,}) =>void;
+// const createFuncWithObj :FuncWithObj= (product)=>{console.log(product)}
+
+
+// const productOne:{
+//     name : string,stock:number,price : number,photo : string,
+// }={
+//     name:"Mackbook",
+//     stock : 34,
+//     price : 99999,
+//     photo: "samplephotourl",
+// }
+// createFuncWithObj(productOne)
