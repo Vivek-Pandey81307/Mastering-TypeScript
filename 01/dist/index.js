@@ -9,10 +9,10 @@
 // // arr2.forEach(i=>{
 // //     alert(i);
 // // })
-const obj2 = { name: "chakravartin", age: 34 };
-const myobject = { height: 34, weight: 43 };
-const objfunc = (o1, o2) => {
-    console.log(`o1 = ${JSON.stringify(o1)} end_o1`);
-    console.log(`o2 = ${JSON.stringify(o2)} end_o2`);
+;
+const gigi = {
+    scholarship: true,
+    height: 234,
+    f_name: "vikas",
 };
-objfunc(myobject, obj2);
+alert(JSON.stringify(gigi));

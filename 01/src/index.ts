@@ -11,13 +11,31 @@
 
 // // const arr : [number,number,number] = [324,234,234];
 
-type obj1 = {height : number,weight :number}
-const obj2:{name : string,age:number} = {name : "chakravartin",age:34}
+// type obj1 = {height : number,weight :number}
+// const obj2:{name : string,age:number} = {name : "chakravartin",age:34}
 
-const myobject : obj1 = {height:34,weight:43}
+// const myobject : obj1 = {height:34,weight:43}
 
-const objfunc = (o1 :obj1 ,o2 :{name : string,age:number})=>{
-    console.log(`o1 = ${JSON.stringify(o1)} end_o1`);
-    console.log(`o2 = ${JSON.stringify(o2)} end_o2`);
-}
-objfunc(myobject,obj2)
+// const objfunc = (o1 :obj1 ,o2 :{name : string,age:number})=>{
+//     console.log(`o1 = ${JSON.stringify(o1)} end_o1`);
+//     console.log(`o2 = ${JSON.stringify(o2)} end_o2`);
+// }
+// objfunc(myobject,obj2)
+
+ interface Obj {
+    height :number,
+    f_name : string,
+    gender?:boolean
+ };
+
+ interface NewObj extends Obj{
+    scholarship :boolean
+ }
+
+
+ const gigi : NewObj = {
+    scholarship:true,
+    height : 234,
+    f_name : "vikas",
+ }
+ alert(JSON.stringify(gigi))
