@@ -22,20 +22,49 @@
 // }
 // objfunc(myobject,obj2)
 
- interface Obj {
-    height :number,
-    f_name : string,
-    gender?:boolean
- };
+//  interface Obj {
+//     height :number,
+//     f_name : string,
+//     gender?:boolean
+//  };
 
- interface NewObj extends Obj{
-    scholarship :boolean
- }
+//  interface NewObj extends Obj{
+//     scholarship :boolean,
+//     func:(n:number,m:number)=>void;
+//  }
+
+ 
+//  const gigi : NewObj = {
+//     scholarship:true,
+//     height : 234,
+//     f_name : "vikas",
+//     func : (n,m)=>{alert(n*m)}
+//  }
+//  gigi.func(3,4)
+//  alert(JSON.stringify(gigi))
 
 
- const gigi : NewObj = {
-    scholarship:true,
-    height : 234,
-    f_name : "vikas",
- }
- alert(JSON.stringify(gigi))
+
+// type funcTypeDefined  = (n :number ,m : number ,l ?:number)=>number|string;
+// const funcMade :funcTypeDefined=(n,m,l)=>{
+//     if(typeof l === "undefined") return "L was not provided"
+//     return m*n*l
+// }
+// alert(funcMade(2,3,2))
+
+//datatype  defining
+// type FuncType = (n:number,m:number,l?:number)=>number;
+ 
+//then defining
+// const funcCreated :FuncType = (n,m,l=20)=>{
+//     return n*m*l;
+// };
+// funcCreated(25,23)
+
+
+//Defining + datatype Defining 
+// const func1 = (n:number,m:number,l:number=20):number=>{
+//     return n*m*l
+// }
+// func1(25,23);
+
