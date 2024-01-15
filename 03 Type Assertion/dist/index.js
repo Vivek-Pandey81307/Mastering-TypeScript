@@ -18,7 +18,7 @@ const myobj = {
 //     return myobj[key];
 // }
 // alert(myobj.name);
-// alert(getData("email"))
-let key = "name";
-alert(myobj[key]);
-alert(myobj["email"]);
+// // alert(getData("email"))
+// let key = "name";
+// alert(myobj[key as keyof Person])
+// alert(myobj["email" as keyof typeof myobj])

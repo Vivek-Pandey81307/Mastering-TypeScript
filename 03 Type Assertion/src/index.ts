@@ -58,8 +58,9 @@ const myobj : Person = {
 //     return myobj[key];
 // }
 // alert(myobj.name);
-// alert(getData("email"))
+// // alert(getData("email"))
 
-let key = "name";
-alert(myobj[key as keyof Person])
-alert(myobj["email" as keyof typeof myobj])
+// let key = "name";
+// alert(myobj[key as keyof Person])
+// alert(myobj["email" as keyof typeof myobj])
+
