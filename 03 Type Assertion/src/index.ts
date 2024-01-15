@@ -30,30 +30,36 @@
 //    [key:string]:string;
 // }
 
-const myobj : Person = {
-    name : "Abhi",
-    email : "abhi@gmail.com"
-} 
+
 // keyOfOperator
 interface Person{
   name : string;
   email : string;
 }
-const getName = ():string=>{
-    return myobj.name
-}
-const getEmail = ():string=>{
-    return myobj.email
-}
+
+const myobj : Person = {
+    name : "Abhi",
+    email : "abhi@gmail.com"
+} 
+// const getName = ():string=>{
+//     return myobj.name
+// }
+// const getEmail = ():string=>{
+//     return myobj.email
+// }
 
 
 // const getData = (key:string):string =>{
 //     return myobj[key]
 // }
 
-// keyOfOperator
-const getData = (key:keyof Person):string=>{
-    return myobj[key];
-}
-alert(myobj.name);
-alert(getData("email"))
+// // keyOfOperator
+// const getData = (key:keyof Person):string=>{
+//     return myobj[key];
+// }
+// alert(myobj.name);
+// alert(getData("email"))
+
+let key = "name";
+alert(myobj[key as keyof Person])
+alert(myobj["email" as keyof typeof myobj])
