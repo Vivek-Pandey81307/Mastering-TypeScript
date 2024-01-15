@@ -38,5 +38,7 @@
 // type ShippingInfo2=Omit<OrderInfo,"country">
 
 
-type Random = Exclude<string |number,number>
-type Random2= Extract<string|number|boolean,number>
+// type Random = Exclude<string |number,number>
+// type Random2= Extract<string|number|boolean,number>
+type forNonNullable=number|string|boolean|null;
+type Random = NonNullable<forNonNullable>
