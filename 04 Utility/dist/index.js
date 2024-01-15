@@ -39,10 +39,12 @@
 // const myfunc =(a:number,b:string)=>{
 //     console.log(a+b);
 // } 
-// type Random = Parameters<typeof myfunc>
-class SampleClass {
-    constructor(s, t) {
-        this.s = s;
-        this.t = t;
-    }
-}
+// // type Random = Parameters<typeof myfunc>
+// class SampleClass{
+//     constructor (public s:string,public t:string){}
+// }
+// type Random = ConstructorParameters<typeof SampleClass>
+const myfunc = (a, b) => {
+    console.log(a + b);
+    return 23;
+};
