@@ -52,7 +52,7 @@ const getEmail = ():string=>{
 // }
 
 // keyOfOperator
-const getData = (key:"name" | "email"):string=>{
+const getData = (key:keyof Person):string=>{
     return myobj[key];
 }
 alert(myobj.name);
