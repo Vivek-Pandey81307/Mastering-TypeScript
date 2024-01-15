@@ -7,3 +7,9 @@
 // // img.src
 // const img = document.querySelector("img")!
 // img.src
+const form = document.getElementById("myform");
+const myinput = document.querySelector("form >input");
+form.onsubmit = (e) => {
+    e.preventDefault();
+    alert(myinput.value);
+};

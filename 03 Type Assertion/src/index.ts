@@ -11,3 +11,13 @@
 
 // const img = document.querySelector("img")!
 // img.src
+
+
+const form = document.getElementById("myform") as HTMLFormElement
+const myinput = document.querySelector("form >input") as HTMLInputElement
+form.onsubmit =(e: SubmitEvent)=>{
+    e.preventDefault();
+   alert(myinput.value)
+}
+
+
