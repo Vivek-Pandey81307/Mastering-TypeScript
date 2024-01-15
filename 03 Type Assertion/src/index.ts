@@ -25,20 +25,20 @@
 //     document.querySelector("body")?.append(h2);
 // }
 
-// indexSignature
-interface Person{
-   [key:string]:string;
-}
+// // indexSignature
+// interface Person{
+//    [key:string]:string;
+// }
 
 const myobj : Person = {
     name : "Abhi",
     email : "abhi@gmail.com"
 } 
-//keyOfOperator
-// interface Person{
-//   name : string;
-//   email : string;
-// }
+// keyOfOperator
+interface Person{
+  name : string;
+  email : string;
+}
 const getName = ():string=>{
     return myobj.name
 }
@@ -47,13 +47,13 @@ const getEmail = ():string=>{
 }
 
 
-const getData = (key:string):string =>{
-    return myobj[key]
-}
-
-//keyOfOperator
-// const getData = (key:"name" | "email"):string=>{
-//     return myobj[key];
+// const getData = (key:string):string =>{
+//     return myobj[key]
 // }
+
+// keyOfOperator
+const getData = (key:"name" | "email"):string=>{
+    return myobj[key];
+}
 alert(myobj.name);
 alert(getData("email"))
