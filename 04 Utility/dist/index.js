@@ -11,10 +11,4 @@
 // //     email:"jaihind@gail.com"
 // // }
 // // user.name="narasj";
-// type User2 = Record<"name"|"email"|"gender",string>
-const users = {
-    john: { age: 34 },
-    elon: { age: 43 },
-    andrew: { age: 32 },
-    jack: { age: 23 },
-};
+// // type User2 = Record<"name"|"email"|"gender",string>

@@ -10,19 +10,29 @@
 // //     email:"jaihind@gail.com"
 // // }
 // // user.name="narasj";
-// type User2 = Record<"name"|"email"|"gender",string>
+// // type User2 = Record<"name"|"email"|"gender",string>
 
 
-interface UserInfo{
-    age :number;
+// interface UserInfo{
+//     age :number;
+// }
+
+// type UserName = "john" | "andrew"|"elon"|"jack";
+
+// const users:Record<UserName,UserInfo>={
+//     john:{age:34},
+//     elon:{age:43},
+//     andrew:{age:32},
+//     jack:{age : 23},
+// }
+
+interface OrderInfo{
+    readonly id : string,
+    user:string,
+    city:string,
+    state:string,
+    country:string,
+    status:string,
 }
-
-type UserName = "john" | "andrew"|"elon"|"jack";
-
-const users:Record<UserName,UserInfo>={
-    john:{age:34},
-    elon:{age:43},
-    andrew:{age:32},
-    jack:{age : 23},
-}
-
+type ShippingInfo=Pick<OrderInfo,"city"|"state"|"country">;
+type ShippingInfo2=Omit<OrderInfo,"country">
