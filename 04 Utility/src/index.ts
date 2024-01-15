@@ -39,13 +39,17 @@
 
 
 // // type Random = Exclude<string |number,number>
-// // type Random2= Extract<string|number|boolean,number>
-// type forNonNullable=number|string|boolean|null;
-// type Random = NonNullable<forNonNullable>
+// // // type Random2= Extract<string|number|boolean,number>
+// // type forNonNullable=number|string|boolean|null;
+// // type Random = NonNullable<forNonNullable>
 
 
-const myfunc =(a:number,b:string)=>{
-    console.log(a+b);
-} 
-type Random = Parameters<typeof myfunc>
+// const myfunc =(a:number,b:string)=>{
+//     console.log(a+b);
+// } 
+// type Random = Parameters<typeof myfunc>
 
+class SampleClass{
+    constructor (public s:string,public t:string){}
+}
+type Random = ConstructorParameters<typeof SampleClass>

@@ -33,9 +33,16 @@
 // type ShippingInfo=Pick<OrderInfo,"city"|"state"|"country">;
 // type ShippingInfo2=Omit<OrderInfo,"country">
 // // type Random = Exclude<string |number,number>
-// // type Random2= Extract<string|number|boolean,number>
-// type forNonNullable=number|string|boolean|null;
-// type Random = NonNullable<forNonNullable>
-const myfunc = (a, b) => {
-    console.log(a + b);
-};
+// // // type Random2= Extract<string|number|boolean,number>
+// // type forNonNullable=number|string|boolean|null;
+// // type Random = NonNullable<forNonNullable>
+// const myfunc =(a:number,b:string)=>{
+//     console.log(a+b);
+// } 
+// type Random = Parameters<typeof myfunc>
+class SampleClass {
+    constructor(s, t) {
+        this.s = s;
+        this.t = t;
+    }
+}
