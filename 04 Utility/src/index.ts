@@ -26,13 +26,17 @@
 //     jack:{age : 23},
 // }
 
-interface OrderInfo{
-    readonly id : string,
-    user:string,
-    city:string,
-    state:string,
-    country:string,
-    status:string,
-}
-type ShippingInfo=Pick<OrderInfo,"city"|"state"|"country">;
-type ShippingInfo2=Omit<OrderInfo,"country">
+// interface OrderInfo{
+//     readonly id : string,
+//     user:string,
+//     city:string,
+//     state:string,
+//     country:string,
+//     status:string,
+// }
+// type ShippingInfo=Pick<OrderInfo,"city"|"state"|"country">;
+// type ShippingInfo2=Omit<OrderInfo,"country">
+
+
+type Random = Exclude<string |number,number>
+type Random2= Extract<string|number|boolean,number>
