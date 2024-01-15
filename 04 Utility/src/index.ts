@@ -52,9 +52,22 @@
 // class SampleClass{
 //     constructor (public s:string,public t:string){}
 // }
-// type Random = ConstructorParameters<typeof SampleClass>
+// // type Random = ConstructorParameters<typeof SampleClass>
 
-const myfunc=(a:number,b:string):number=>{
-    console.log(a+b);return 23;
+// const myfunc=(a:number,b:string):number=>{
+//     console.log(a+b);return 23;
+// }
+// type funcType = ReturnType<typeof myfunc>
+
+class SampleClass{
+    constructor(public s:string,public t :string){
+
+    }
 }
-type funcType = ReturnType<typeof myfunc>
+type Random = InstanceType<typeof SampleClass>
+
+
+const user:Random={
+    s:"44",
+    t:"ssds",
+}
