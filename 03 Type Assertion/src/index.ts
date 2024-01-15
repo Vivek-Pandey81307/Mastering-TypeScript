@@ -17,7 +17,12 @@ const form = document.getElementById("myform") as HTMLFormElement
 const myinput = document.querySelector("form >input") as HTMLInputElement
 form.onsubmit =(e: SubmitEvent)=>{
     e.preventDefault();
-   alert(myinput.value)
+    const value = Number(myinput.value);
+    alert(value)
+    alert(typeof value);
+    const h2 = document.createElement("h2");
+    h2.textContent=String(value+20);
+    document.querySelector("body")?.append(h2);
 }
 
 
