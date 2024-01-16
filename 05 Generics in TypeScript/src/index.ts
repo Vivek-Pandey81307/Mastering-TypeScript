@@ -1,26 +1,41 @@
-// const func= (n:any):any=>{
-//     return n;
-// }
-// const ans = func(20);
+// // const func= (n:any):any=>{
+// //     return n;
+// // }
+// // const ans = func(20);
 
-//generic
+// //generic
 
-// const func = <T>(n:T):T=>{
-//     return n;
-// }
-// const ans = func(20);
-// const ans2= func("string");
-// const ans3 = func(true);
+// // const func = <T>(n:T):T=>{
+// //     return n;
+// // }
+// // const ans = func(20);
+// // const ans2= func("string");
+// // const ans3 = func(true);
 
-// type Person = {
-//     name :string,
-//     age :number
+// // type Person = {
+// //     name :string,
+// //     age :number
+// // }
+// // const func = <T>(n:T):T=>{
+// //     return n;
+// // }
+// // const abhi:Person = {name:"Rahj",age:34}
+// // const ans = func<Person>(abhi)
+// // alert(JSON.stringify(ans))
+// const arr:number[]=[]
+// const arr2:Array<number>=[]
+
+// const func = < T ,U>(n:T ,o:U):{n:T,o:U}=>{
+//     return {n,o};
 // }
-// const func = <T>(n:T):T=>{
-//     return n;
-// }
-// const abhi:Person = {name:"Rahj",age:34}
-// const ans = func<Person>(abhi)
-// alert(JSON.stringify(ans))
-const arr:number[]=[]
-const arr2:Array<number>=[]
+// const ans = func<number,string>(20,"lol");
+// console.log(ans.n)
+type Person={
+    name :string,age:number
+}
+
+const func = < T , U extends T>(n:T ,o:U):{n:T,o:U}=>{
+    return {n,o};
+}
+
+const ans = func<Person ,{name:string,age:number,email:string}>({name:"akash",age:34},{name:"sakhal",age:23,email:"chakravartin"});
