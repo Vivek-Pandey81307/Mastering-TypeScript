@@ -3,7 +3,16 @@
 // //     return n;
 // // }
 // // const ans = func(20);
-const func = (n, o) => {
-    return { n, o };
+const users = [
+    { name: "aghil", age: 34 },
+    { name: "chakiv", age: 32 },
+    { name: "sajjo", age: 23 },
+    { name: "vakilsh", age: 72 }
+];
+const filterByPeoples = (arr, property, value) => {
+    return arr.filter(item => item[property] === value);
 };
-const ans = func({ name: "akash", age: 34 }, { name: "sakhal", age: 23, email: "chakravartin" });
+const filteredPeopleByName = filterByPeoples(users, "name", "aghil");
+const filteredPeopleByAge = filterByPeoples(users, "age", 32);
+alert(JSON.stringify(filteredPeopleByName));
+alert(JSON.stringify(filteredPeopleByAge));
