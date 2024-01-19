@@ -6,8 +6,9 @@ function App() {
     <>
       <div>
         <Box heading={'Hello Welcome'}
-        count={34} func1={(a:string)=>{alert(a)}}>
-        {<>Wow World!</>}
+         func1={(a:string)=>{alert(a)}}>
+        {<><button>Click me</button></>
+        }
         </Box>
 
       </div>
