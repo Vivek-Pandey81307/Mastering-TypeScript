@@ -1,10 +1,11 @@
 import {createContext,ReactNode,useState} from "react";
+import Case from "./components/Case";
 type ThemeType = "light" | "dark"
 interface ThemeContextType{
   theme: ThemeType;
   toggleTheme : ()=>void;
 }
-const ThemeContext = createContext<ThemeContextType|null>({theme:"light",toggleTheme:()=>{}})
+export const ThemeContext = createContext<ThemeContextType>({theme:"light",toggleTheme:()=>{}})
 const ThemeProvider = ({children}:{children:ReactNode})=>{
   const [theme,setTheme] = useState<ThemeType>("light")
   const toggleTheme = ()=>{
@@ -16,7 +17,7 @@ const ThemeProvider = ({children}:{children:ReactNode})=>{
 }
 function App(){
   return <ThemeProvider>
-    <div>Hello</div>
+    <Case />
   </ThemeProvider>
 }
 export default App;
