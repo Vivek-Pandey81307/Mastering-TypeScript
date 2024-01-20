@@ -1,16 +1,11 @@
-import { Children } from 'react'
-import Box from './components/Box'
+ import Box from './components/Box'
+ import {useState} from 'react'
 function App() {
-
+  const [val,setVal]=useState<string>("")
   return (
     <>
       <div>
-        <Box heading={'Hello Welcome'}
-         func1={(a:string)=>{alert(a)}}>
-        {<><button>Click me</button></>
-        }
-        </Box>
-
+        <Box label='Search' value={val} setter={setVal}/>
       </div>
     </>
   )

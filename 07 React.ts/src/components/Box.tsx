@@ -1,21 +1,15 @@
-import { ReactNode } from "react";
-
-type PropsType={
-    heading:string,
-    count?:number,
-    func1:(a:string)=>void,
-    children: ReactNode,
-};
-
-const Box = ({heading,count=5,func1,children} : PropsType) => {
-  func1("alerted!");
-  return (
-    <div>
-        <h1>{heading}</h1>
-        {count &&<p>{count}</p>}
-        {children}
-    </div>
-  )
+import { Dispatch, SetStateAction } from "react";
+type InputValType= string|number;
+const Box = <T extends InputValType>({label,value,setter}:{
+  label:string,
+  value:T,
+  setter:Dispatch<SetStateAction<T>>;
+}) =>{
+  return <form>
+    <label>{label}</label>
+    <input type="text" value={value} onChange={(e)=>setter(e.target.value as T)}></input>
+    <button type="submit">Submit</button>
+  </form>
 }
 
-export default Box
+export default Box;
